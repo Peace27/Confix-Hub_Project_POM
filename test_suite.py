@@ -2,8 +2,8 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-from ActionPage.ActionsPage import InvalidLoginActionsPage, ValidLoginActionsPage, AddNewContact1ActionsPage, \
-    FillContact1ActionsPage
+from ActionPage.ActionsPage import InvalidLoginActionsPage, ValidLoginActionsPage, ClickAddNewContact1ActionsPage, \
+    AddNewContact1ActionsPage, AddNewContact2ActionsPage, ClickAddNewContact2ActionsPage
 
 
 @pytest.fixture(scope="module")
@@ -48,14 +48,14 @@ def test_valid_Login_Credentials(login1):
 
 
 def test_click_add_contact1_icon(login1):
-    addnewcontact1 = AddNewContact1ActionsPage(login1.driver)
+    addnewcontact1 = ClickAddNewContact1ActionsPage(login1.driver)
     addnewcontact1.click_add_new_contact1_icon("")
 
 
-def test_fill_contact1(login1):
-    contact1_details = FillContact1ActionsPage(login1.driver)
-    contact1_details.fill_contact1_first_name("")
-    contact1_details.fill_contact1_lastname("")
+def test_Add_New_Contact1_Details(login1):
+    contact1_details = AddNewContact1ActionsPage(login1.driver)
+    contact1_details.fill_contact1_firstname("Shane")
+    contact1_details.fill_contact1_lastname("Jakes")
     contact1_details.fill_contact1_birthdate("2020-01-01")
     contact1_details.fill_contact1_email("peace1@gmail.com")
     contact1_details.fill_contact1_phone("8022805621")
@@ -66,3 +66,172 @@ def test_fill_contact1(login1):
     contact1_details.fill_contact1_postalcode("01234")
     contact1_details.fill_contact1_country("Nigeria")
     contact1_details.fill_contact1_submit()
+
+
+def test_click_add_contact2_icon(login1):
+    addnewcontact2 = ClickAddNewContact2ActionsPage(login1.driver)
+    addnewcontact2.click_add_new_contact2_icon("")
+
+
+def test_Add_New_Contact2_Details(login1):
+    contact2_details = AddNewContact2ActionsPage(login1.driver)
+    contact2_details.fill_contact2_firstname("Jack")
+    contact2_details.fill_contact2_lastname("Chan")
+    contact2_details.fill_contact2_birthdate("2021-01-01")
+    contact2_details.fill_contact2_email("peace2@gmail.com")
+    contact2_details.fill_contact2_phone("8022805622")
+    contact2_details.fill_contact2_street1("House 2, London Street")
+    contact2_details.fill_contact2_street2("House 2, Scotland Street")
+    contact2_details.fill_contact2_city("Lekki")
+    contact2_details.fill_contact2_state("Lagos")
+    contact2_details.fill_contact2_postalcode("01234")
+    contact2_details.fill_contact2_country("Nigeria")
+    contact2_details.fill_contact2_submit()
+
+#
+# def test_Add_New_Contact1_Details(login1):
+#     contact1_details = AddNewContact1ActionsPage(login1.driver)
+#     contact1_details.fill_contact1_firstname("Shane")
+#     contact1_details.fill_contact1_lastname("Jakes")
+#     contact1_details.fill_contact1_birthdate("2020-01-01")
+#     contact1_details.fill_contact1_email("peace1@gmail.com")
+#     contact1_details.fill_contact1_phone("8022805621")
+#     contact1_details.fill_contact1_street1("House 1, London Street")
+#     contact1_details.fill_contact1_street2("House 1, Scotland Street")
+#     contact1_details.fill_contact1_city("Ikeja")
+#     contact1_details.fill_contact1_state("Lagos")
+#     contact1_details.fill_contact1_postalcode("01234")
+#     contact1_details.fill_contact1_country("Nigeria")
+#     contact1_details.fill_contact1_submit()
+#
+#
+# def test_Add_New_Contact1_Details(login1):
+#     contact1_details = AddNewContact1ActionsPage(login1.driver)
+#     contact1_details.fill_contact1_firstname("Shane")
+#     contact1_details.fill_contact1_lastname("Jakes")
+#     contact1_details.fill_contact1_birthdate("2020-01-01")
+#     contact1_details.fill_contact1_email("peace1@gmail.com")
+#     contact1_details.fill_contact1_phone("8022805621")
+#     contact1_details.fill_contact1_street1("House 1, London Street")
+#     contact1_details.fill_contact1_street2("House 1, Scotland Street")
+#     contact1_details.fill_contact1_city("Ikeja")
+#     contact1_details.fill_contact1_state("Lagos")
+#     contact1_details.fill_contact1_postalcode("01234")
+#     contact1_details.fill_contact1_country("Nigeria")
+#     contact1_details.fill_contact1_submit()
+#
+#
+# def test_Add_New_Contact1_Details(login1):
+#     contact1_details = AddNewContact1ActionsPage(login1.driver)
+#     contact1_details.fill_contact1_firstname("Shane")
+#     contact1_details.fill_contact1_lastname("Jakes")
+#     contact1_details.fill_contact1_birthdate("2020-01-01")
+#     contact1_details.fill_contact1_email("peace1@gmail.com")
+#     contact1_details.fill_contact1_phone("8022805621")
+#     contact1_details.fill_contact1_street1("House 1, London Street")
+#     contact1_details.fill_contact1_street2("House 1, Scotland Street")
+#     contact1_details.fill_contact1_city("Ikeja")
+#     contact1_details.fill_contact1_state("Lagos")
+#     contact1_details.fill_contact1_postalcode("01234")
+#     contact1_details.fill_contact1_country("Nigeria")
+#     contact1_details.fill_contact1_submit()
+
+def test_click_add_contact2_icon(login1):
+    addnewcontact2 = ClickAddNewContact2ActionsPage(login1.driver)
+    addnewcontact2.click_add_new_contact2_icon("")
+
+
+def test_Add_New_Contact2_Details(login1):
+    contact2_details = AddNewContact2ActionsPage(login1.driver)
+    contact2_details.fill_contact2_firstname("Jack")
+    contact2_details.fill_contact2_lastname("Chan")
+    contact2_details.fill_contact2_birthdate("2021-01-01")
+    contact2_details.fill_contact2_email("peace2@gmail.com")
+    contact2_details.fill_contact2_phone("8022805622")
+    contact2_details.fill_contact2_street1("House 2, London Street")
+    contact2_details.fill_contact2_street2("House 2, Scotland Street")
+    contact2_details.fill_contact2_city("Lekki")
+    contact2_details.fill_contact2_state("Lagos")
+    contact2_details.fill_contact2_postalcode("01234")
+    contact2_details.fill_contact2_country("Nigeria")
+    contact2_details.fill_contact2_submit()
+
+def test_click_add_contact2_icon(login1):
+    addnewcontact2 = ClickAddNewContact2ActionsPage(login1.driver)
+    addnewcontact2.click_add_new_contact2_icon("")
+
+
+def test_Add_New_Contact2_Details(login1):
+    contact2_details = AddNewContact2ActionsPage(login1.driver)
+    contact2_details.fill_contact2_firstname("Jack")
+    contact2_details.fill_contact2_lastname("Chan")
+    contact2_details.fill_contact2_birthdate("2021-01-01")
+    contact2_details.fill_contact2_email("peace2@gmail.com")
+    contact2_details.fill_contact2_phone("8022805622")
+    contact2_details.fill_contact2_street1("House 2, London Street")
+    contact2_details.fill_contact2_street2("House 2, Scotland Street")
+    contact2_details.fill_contact2_city("Lekki")
+    contact2_details.fill_contact2_state("Lagos")
+    contact2_details.fill_contact2_postalcode("01234")
+    contact2_details.fill_contact2_country("Nigeria")
+    contact2_details.fill_contact2_submit()
+
+def test_click_add_contact2_icon(login1):
+    addnewcontact2 = ClickAddNewContact2ActionsPage(login1.driver)
+    addnewcontact2.click_add_new_contact2_icon("")
+
+
+def test_Add_New_Contact2_Details(login1):
+    contact2_details = AddNewContact2ActionsPage(login1.driver)
+    contact2_details.fill_contact2_firstname("Jack")
+    contact2_details.fill_contact2_lastname("Chan")
+    contact2_details.fill_contact2_birthdate("2021-01-01")
+    contact2_details.fill_contact2_email("peace2@gmail.com")
+    contact2_details.fill_contact2_phone("8022805622")
+    contact2_details.fill_contact2_street1("House 2, London Street")
+    contact2_details.fill_contact2_street2("House 2, Scotland Street")
+    contact2_details.fill_contact2_city("Lekki")
+    contact2_details.fill_contact2_state("Lagos")
+    contact2_details.fill_contact2_postalcode("01234")
+    contact2_details.fill_contact2_country("Nigeria")
+    contact2_details.fill_contact2_submit()
+
+def test_click_add_contact2_icon(login1):
+    addnewcontact2 = ClickAddNewContact2ActionsPage(login1.driver)
+    addnewcontact2.click_add_new_contact2_icon("")
+
+
+def test_Add_New_Contact2_Details(login1):
+    contact2_details = AddNewContact2ActionsPage(login1.driver)
+    contact2_details.fill_contact2_firstname("Jack")
+    contact2_details.fill_contact2_lastname("Chan")
+    contact2_details.fill_contact2_birthdate("2021-01-01")
+    contact2_details.fill_contact2_email("peace2@gmail.com")
+    contact2_details.fill_contact2_phone("8022805622")
+    contact2_details.fill_contact2_street1("House 2, London Street")
+    contact2_details.fill_contact2_street2("House 2, Scotland Street")
+    contact2_details.fill_contact2_city("Lekki")
+    contact2_details.fill_contact2_state("Lagos")
+    contact2_details.fill_contact2_postalcode("01234")
+    contact2_details.fill_contact2_country("Nigeria")
+    contact2_details.fill_contact2_submit()
+
+def test_click_add_contact2_icon(login1):
+    addnewcontact2 = ClickAddNewContact2ActionsPage(login1.driver)
+    addnewcontact2.click_add_new_contact2_icon("")
+
+
+def test_Add_New_Contact2_Details(login1):
+    contact2_details = AddNewContact2ActionsPage(login1.driver)
+    contact2_details.fill_contact2_firstname("Jack")
+    contact2_details.fill_contact2_lastname("Chan")
+    contact2_details.fill_contact2_birthdate("2021-01-01")
+    contact2_details.fill_contact2_email("peace2@gmail.com")
+    contact2_details.fill_contact2_phone("8022805622")
+    contact2_details.fill_contact2_street1("House 2, London Street")
+    contact2_details.fill_contact2_street2("House 2, Scotland Street")
+    contact2_details.fill_contact2_city("Lekki")
+    contact2_details.fill_contact2_state("Lagos")
+    contact2_details.fill_contact2_postalcode("01234")
+    contact2_details.fill_contact2_country("Nigeria")
+    contact2_details.fill_contact2_submit()
