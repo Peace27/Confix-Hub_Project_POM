@@ -110,7 +110,7 @@ class AddNewContact5LocatorsPage:
 
 
 class ClickAddNewContact6LocatorsPage:
-    CLICK_ADD_NEW_CONTACT2_ICON = (By.ID, "add-contact")
+    CLICK_ADD_NEW_CONTACT6_ICON = (By.ID, "add-contact")
 
 
 class AddNewContact6LocatorsPage:
@@ -193,7 +193,7 @@ class AddNewContact10LocatorsPage:
     FILL_CONTACT10_FIRST_NAME = (By.ID, "firstName")
     FILL_CONTACT10_LAST_NAME = (By.ID, "lastName")
     FILL_CONTACT10_BIRTHDATE = (By.ID, "birthdate")
-    FILL_CONTACT110_EMAIL = (By.ID, "email")
+    FILL_CONTACT10_EMAIL = (By.ID, "email")
     FILL_CONTACT10_PHONE = (By.ID, "phone")
     FILL_CONTACT10_STREET1 = (By.ID, "street1")
     FILL_CONTACT10_STREET2 = (By.ID, "street2")
@@ -202,3 +202,7 @@ class AddNewContact10LocatorsPage:
     FILL_CONTACT10_POSTALCODE = (By.ID, "postalCode")
     FILL_CONTACT10_COUNTRY = (By.ID, "country")
     FILL_CONTACT10_SUBMIT = (By.ID, "submit")
+
+
+class LogoutButtonLocationPage:
+    CLICK_LOGOUT_BUTTON = (By.ID, "logout")
