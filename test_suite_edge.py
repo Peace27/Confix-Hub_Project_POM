@@ -17,8 +17,8 @@ from Config.config import Config
 def driver_setup():
     edge_options = Options()
     # Uncomment the line below to run in headless mode
-    # edge_options.add_argument("--headless")  # Run Edge in headless mode
-    # edge_options.add_argument("--disable-gpu")  # Optional: Disable GPU acceleration
+    edge_options.add_argument("--headless")  # Run Edge in headless mode
+    edge_options.add_argument("--disable-gpu")  # Optional: Disable GPU acceleration
     driver = webdriver.Edge(options=edge_options)
     driver.implicitly_wait(20)
     driver.maximize_window()
