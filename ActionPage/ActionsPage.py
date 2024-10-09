@@ -1,6 +1,7 @@
 import time
 
 from selenium.webdriver.support.wait import WebDriverWait
+
 from selenium.webdriver.support import expected_conditions as EC
 
 from LocatorPage.LocatorsPage import InvalidLoginLocatorsPage, ValidLoginLocatorsPage, ClickAddNewContact1LocatorsPage, \
@@ -43,8 +44,8 @@ class ValidLoginActionsPage:
     def __init__(self, driver):
         self.driver = driver
 
-    def open_url1(self, url):
-        self.driver.get(url)
+    def open_url1(self, url1):
+        self.driver.get(url1)
 
     def enter_valid_email(self, email):
         enter_valid_email = WebDriverWait(self.driver, 20).until(
