@@ -17,8 +17,8 @@ from Config.config import Config
 def driver_setup():
     firefox_options = Options()
     # Uncomment the line below to run in headless mode
-    firefox_options.add_argument("--headless")  # Run Firefox in headless mode
-    firefox_options.add_argument("--disable-gpu")  # Optional: Disable GPU acceleration
+    # firefox_options.add_argument("--headless")  # Run Firefox in headless mode
+    # firefox_options.add_argument("--disable-gpu")  # Optional: Disable GPU acceleration
     driver = webdriver.Firefox(options=firefox_options)
     driver.implicitly_wait(20)
     driver.maximize_window()

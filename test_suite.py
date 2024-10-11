@@ -1,10 +1,6 @@
 import pytest
-
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-# from selenium.webdriver.edge.options import Options
-# from selenium.webdriver.firefox.options import Options
-
 
 from ActionPage.ActionsPage import InvalidLoginActionsPage, ValidLoginActionsPage, ClickAddNewContact1ActionsPage, \
     AddNewContact1ActionsPage, AddNewContact2ActionsPage, ClickAddNewContact2ActionsPage, \
@@ -21,9 +17,9 @@ from Config.config import Config
 def driver_setup():
     chrome_options = Options()
     # Uncomment the line below to run in headless mode
-    # chrome_options.add_argument("--headless")  # Run Chrome in headless mode
+    # chrome_options.add_argument("--headless")  # Run Edge in headless mode
     # chrome_options.add_argument("--disable-gpu")  # Optional: Disable GPU acceleration
-    driver = webdriver.Chrome(options=chrome_options)
+    driver = webdriver.Edge(options=chrome_options)
     driver.implicitly_wait(20)
     driver.maximize_window()
     yield driver
